@@ -2,45 +2,97 @@
     <div class="col-md-3">
     </div>
     <div class="col-md-6 card border-primary" style="padding: 15px; background-color: #FAE6FA">
-        <mat-tab-group>
+        <mat-tab-group (selectedTabChange)="tabClick($event)">
             <mat-tab label="Java">
                 <mat-card class="example-card">
                     <mat-card-title class="text-center">Java</mat-card-title>
                     <mat-divider inset></mat-divider>
-                    <mat-card-content>
-                        Stuff about Java
+                    <mat-card-content style="margin-top: 5px;">
+                        <mat-chip-list>
+                            <mat-chip *ngFor="let chip of categories; index as idx" [selected]="chip.selected"
+                                (click)="changeSelected(idx)" color="accent">
+                                {{chip.title}}
+                            </mat-chip>
+                        </mat-chip-list>
+                        <div class="card" style="margin-top: 5px; padding: 5px;">
+                            <h1>
+                                {{displayCard.title}}
+                            </h1>
+                            <h3>
+                                {{displayCard.desc}}
+                            </h3>
+                        </div>
                     </mat-card-content>
-                </mat-card>              
+                </mat-card>
             </mat-tab>
             <mat-tab label="Javascript">
                 <mat-card class="example-card">
                     <mat-card-title class="text-center">Javascript</mat-card-title>
                     <mat-divider inset></mat-divider>
-                    <mat-card-content>
-                        Stuff about Javascript
+                    <mat-card-content style="margin-top: 5px;">
+                        <mat-chip-list>
+                            <mat-chip *ngFor="let chip of categories; index as idx" [selected]="chip.selected"
+                                (click)="changeSelected(idx)" color="warn">
+                                {{chip.title}}
+                            </mat-chip>
+                        </mat-chip-list>
+                        <div class="card" style="margin-top: 5px; padding: 5px;">
+                            <h1>
+                                {{displayCard.title}}
+                            </h1>
+                            <h3>
+                                {{displayCard.desc}}
+                            </h3>
+                        </div>
                     </mat-card-content>
-                </mat-card>              
+                </mat-card>
             </mat-tab>
             <mat-tab label="Python">
                 <mat-card class="example-card">
                     <mat-card-title class="text-center">Python</mat-card-title>
                     <mat-divider inset></mat-divider>
-                    <mat-card-content>
-                        Stuff about Python
+                    <mat-card-content style="margin-top: 5px;">
+                        <mat-chip-list>
+                            <mat-chip *ngFor="let chip of categories; index as idx" [selected]="chip.selected"
+                                (click)="changeSelected(idx)" color="primary">
+                                {{chip.title}}
+                            </mat-chip>
+                        </mat-chip-list>
+                        <div class="card" style="margin-top: 5px; padding: 5px;">
+                            <h1>
+                                {{displayCard.title}}
+                            </h1>
+                            <h3>
+                                {{displayCard.desc}}
+                            </h3>
+                        </div>
                     </mat-card-content>
-                </mat-card>              
+                </mat-card>
             </mat-tab>
             <mat-tab label="C Plus Plus">
                 <mat-card class="example-card">
                     <mat-card-title class="text-center">C++</mat-card-title>
                     <mat-divider inset></mat-divider>
-                    <mat-card-content>
-                        Stuff about C++
+                    <mat-card-content style="margin-top: 5px;" color="warn">
+                        <mat-chip-list>
+                            <mat-chip *ngFor="let chip of categories; index as idx" [selected]="chip.selected"
+                                (click)="changeSelected(idx)">
+                                {{chip.title}}
+                            </mat-chip>
+                        </mat-chip-list>
+                        <div class="card" style="margin-top: 5px; padding: 5px;">
+                            <h1>
+                                {{displayCard.title}}
+                            </h1>
+                            <h3>
+                                {{displayCard.desc}}
+                            </h3>
+                        </div>
                     </mat-card-content>
-                </mat-card>              
+                </mat-card>
             </mat-tab>
         </mat-tab-group>
     </div>
     <div class="col-md-3">
     </div>
-</div>  
+</div>
