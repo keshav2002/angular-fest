@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
 
   loginForm;
   submitted;
+  panelOpenState = false;
 
   ngOnInit(): void {
   }

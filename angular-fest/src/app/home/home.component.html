@@ -50,5 +50,30 @@
     </mat-card>
   </div>
   <div class="col-md-3">
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Hacktoberfest 2022
+          </mat-panel-title>
+          <mat-panel-description>
+            About the event
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Click here
+          </mat-panel-title>
+          <mat-panel-description>
+            {{panelOpenState ? 'You may close' : 'Open'}} me!
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>Hacktoberfest isnt't all about code. Anyone who writes, designs, tests, mentors, or organizes offers much needed support for open-source projects all over the world.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
   </div>
 </div>

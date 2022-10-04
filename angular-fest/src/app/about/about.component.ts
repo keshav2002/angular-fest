@@ -1,4 +1,3 @@
-import { temporaryAllocator } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit } from '@angular/core';
 import { FakeDataRepo } from './FakeDataRepo';
 
@@ -23,7 +22,7 @@ export class AboutComponent implements OnInit {
 
   displayCard: InfoCard = { title: 'Nothing selected', desc: '' };
 
-  tabs = ['Java', 'Javascript', 'Python', 'C++']
+  tabs = ['Java', 'Javascript', 'Python', 'C++'];
 
   constructor() { }
 
